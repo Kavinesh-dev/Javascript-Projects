@@ -27,7 +27,6 @@ function saveNote() {
       data.push({ titleItem, elItem });
     }
   });
-
   const saveData = JSON.stringify(data);
   localStorage.setItem("notes", saveData);
 }
