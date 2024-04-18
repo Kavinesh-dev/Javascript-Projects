@@ -42,8 +42,9 @@ function getData() {
   }
 }
 
-function addNote(text = "", title = "") {
-  // console.log(title);
+function addNote(e, text = "", title = "") {
+  // console.log(e);
+  console.log(text);
   const noteDiv = document.createElement("div");
   noteDiv.classList.add("note");
   noteDiv.insertAdjacentHTML(
@@ -77,8 +78,6 @@ function addNote(text = "", title = "") {
   deleteBtn.addEventListener("click", deleteItem);
 }
 
-addBtn.addEventListener("click", function () {
-  addNote();
-});
+addBtn.addEventListener("click", addNote);
 
 getData();
