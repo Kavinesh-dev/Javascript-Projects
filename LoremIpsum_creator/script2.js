@@ -15,7 +15,7 @@
    class output div.
    2. Create the functionality for paragraph range for increasing value.
    3. Create the functionality for words range for increasing value
-   4.
+   4. Create the functionality for adding tags in the tag section.
  */
 
 // Script.js
