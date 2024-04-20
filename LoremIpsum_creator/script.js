@@ -55,7 +55,11 @@ function createWords(words) {
 		consequat mauris nunc.`;
 
   const loremValue = para.split(" ").filter((el) => el !== " ");
-  return loremValue.slice(0, words).join(" ");
+  if (words <= loremValue.length) {
+    return loremValue.slice(0, words).join(" ");
+  } else {
+    return words;
+  }
 }
 
 //Function for creating paragraph;
