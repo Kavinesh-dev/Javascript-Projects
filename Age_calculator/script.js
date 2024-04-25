@@ -34,15 +34,17 @@ function getDOB(dob, current) {
     d3 = getDate(y1, m1) + d2 - d1;
   }
   ageContainer.innerHTML = `You are ${y3} years, ${m3} months and ${d3} days old`;
+}
+
+function showCurDate(date) {
+  const y2 = date.getFullYear();
+  const m2 = date.getMonth() + 1;
+  const d2 = date.getDate();
   currentInput.setAttribute(
     "value",
     `${y2.toString()}-${m2.toString().padStart(2, "0")}-${d2.toString()}`
   );
 }
-
-// function showCurDate(y2, m2, d2) {
-
-// }
 
 function getDate(year, month) {
   return new Date(year, month, 0).getDate();
@@ -54,5 +56,5 @@ function calculateAge() {
   getDOB(dobValue, curValue);
 }
 
-// calculateBtn.addEventListener("click", calculateAge);
-calculateAge();
+calculateBtn.addEventListener("click", calculateAge);
+showCurDate(new Date());
